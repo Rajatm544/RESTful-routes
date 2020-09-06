@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style type="text/css">
+		.jumbotron {
+			font-size: 5em;
+			text-align: center;
+			color: rgba(0, 0, 0, 0.6);
+			padding: 0.5em;
+		}
+	</style>
+	<title>RESTful Routes</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			RESTful Routes
+			<h3>A table of all 7 RESTful routes</h3>
+		</div>
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Url</th>
+					<th>HTTP Verb</th>
+					<th>Purpose</th>
+					<th>Mongoose Method</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>INDEX</td>
+					<td>/dogs</td>
+					<td>GET</td>
+					<td>Display a list of all dogs</td>
+					<td>Dog.find( )</td>
+				</tr>
+				<tr class="table-success">
+					<td>NEW</td>
+					<td>/dogs/new</td>
+					<td>GET</td>
+					<td>Displays form to add a new dog</td>
+					<td>N/A</td>
+				</tr>
+				<tr class="table-success">
+					<td>CREATE</td>
+					<td>/dogs</td>
+					<td>POST</td>
+					<td>Add a new dog to database, redirect somewhere</td>
+					<td>Dog.create( )</td>
+				</tr>
+				<tr class="table-primary">
+					<td>SHOW</td>
+					<td>/dogs/:id</td>
+					<td>GET</td>
+					<td>Shows info about one dog</td>
+					<td>Dog.findById( )</td>
+				</tr>
+				<tr class="table-warning">
+					<td>EDIT</td>
+					<td>/dogs/:id/edit</td>
+					<td>GET</td>
+					<td>Show edit form for one dog</td>
+					<td>Dog.findById( )</td>
+				</tr>
+				<tr class="table-warning">
+					<td>UPDATE</td>
+					<td>/dogs/:id</td>
+					<td>PUT</td>
+					<td>Update a particular dog then redirect somewhere</td>
+					<td>Dog.findByIdAndUpdate( )</td>
+				</tr>
+				<tr class="table-danger">
+					<td>DESTROY</td>
+					<td>/dogs/:id</td>
+					<td>DELETE</td>
+					<td>Delete a particular dog then redirect somewhere</td>
+					<td>Dog.findByIdAndRemove( )</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>
